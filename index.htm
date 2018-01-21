@@ -17,9 +17,10 @@
 			
 			var categories = [Music[Math.floor(Math.random()*Music.length)], Videos[Math.floor(Math.random()*Videos.length)]];
 			
-			frameRate(30);
+			var x = 0;
 			draw = function() {
-				if(frameCount > 200) {
+			x++;
+				if(x > 200) {
 					link(categories[Math.floor(Math.random()*categories.length)]);
 				}
 			};
