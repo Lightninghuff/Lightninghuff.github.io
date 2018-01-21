@@ -17,9 +17,10 @@
 			
 			var categories = [Music[Math.floor(Math.random()*Music.length)], Videos[Math.floor(Math.random()*Videos.length)]];
 			
+			frameRate(30);
 			draw = function() {
-				if(frameCount > 500) {
-					window.location.href = categories[Math.floor(Math.random()*categories.length)]
+				if(frameCount > 200) {
+					link(categories[Math.floor(Math.random()*categories.length)]);
 				}
 			};
 		</script>
