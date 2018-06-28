@@ -13,7 +13,8 @@
     </head>
 	<body>
 	<img src="Images/Jaguar.png" alt="Superconscious Jaguar" width="100%" height="30%">
-	<iframe id = "videoEmbed" width="100%" height="100%" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<!-- <iframe id="videoEmbed" width="100%" height="100%" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> !-->
+	<p id = "videoEmbed"></p>
 	<script type="text/javascript">
 		  //$(document).ready(function () {
 				//var Electro = ["https://www.youtube.com/watch?v=Wm-iUlReoWU", "https://www.youtube.com/watch?v=3_-a9nVZYjk", "https://www.youtube.com/watch?v=3fxq7kqyWO8", "https://www.youtube.com/watch?v=n8X9_MgEdCg", "https://www.youtube.com/watch?v=a_xzBQISnlA", "https://www.youtube.com/watch?v=-mSRraXCY9w", "https://www.youtube.com/watch?v=5hEh9LiSzow", "https://www.youtube.com/watch?v=qo6ygYSxwEY", "https://www.youtube.com/watch?v=oz6kKB8wlj8", "https://www.youtube.com/watch?v=5zARzHddnWc", "https://www.youtube.com/watch?v=s8XIgR5OGJc", "https://www.youtube.com/watch?v=vBdnfyfBSKg", "https://www.youtube.com/watch?v=ULHeRdgeT54", "https://www.youtube.com/watch?v=v8B5AOljhsY", "https://www.youtube.com/watch?v=QcTRc0biGwo", "https://www.youtube.com/watch?v=EbGqdJu1M5k", "https://www.youtube.com/watch?v=vPxf8m93GgY", "https://www.youtube.com/watch?v=1b2we5jOKXA", "https://www.youtube.com/watch?v=NLmqqimN_6M", "https://www.youtube.com/watch?v=MA2KbcSsFcQ", "https://www.youtube.com/watch?v=VVDNaMUbMcY", "https://www.youtube.com/watch?v=sHcbvJVP74E", "https://www.youtube.com/watch?v=m8K1gL6GM8s", "https://www.youtube.com/watch?v=f5da_QmLWas", "https://www.youtube.com/watch?v=d0eUMnJ5kTA", "https://www.youtube.com/watch?v=DZzfShAg83A", "https://www.youtube.com/watch?v=v2ag1jsQvds"];
@@ -32,7 +33,7 @@
 			//var html='<iframe width="100%" height="100%" src="https://www.youtube.com/embed/"' + index + '"?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
 			//document.write(html);
 		//});
-		document.getElementById("videoEmbed").src = "https://www.youtube.com/embed/" + videos[index] + "?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1";
+		document.getElementById("videoEmbed").innerHtml = "https://www.youtube.com/embed/" + videos[index] + "?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1";
 	</script>
 	</body>
 </html>
