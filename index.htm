@@ -23,6 +23,9 @@
 		</style>
     </head>
 	<body>
+	<div class="center">
+	<canvas id=c width=640 height=320></canvas>
+	</div>
 	<script>
 		var ctx = c.getContext("2d", {alpha: false});       // context without alpha channel.
 		var idata = ctx.createImageData(c.width, c.height); // create image data
@@ -37,12 +40,9 @@
 		  ctx.putImageData(idata, 0, 0);
 		}
 	</script>
-	<div class="center">
-	<canvas id=c width=640 height=320></canvas>
-	</div>
 	<br>
 	<div class="center">
-	<iframe id="randomVideo" width="80%" height="300px" src="https://www.youtube.com/embed/12TDlEOhgCE?rel=0&amp;autoplay=1&list=RDMM&start_radio=1&index=1" frameborder="0" allow="autoplay; encrypted-media" style="display: block; margin-left: auto; margin-right: auto; border: 3px solid #000000; padding: 7px;" allowfullscreen></iframe>
+	<iframe id="randomVideo" width="80%" height="300px" src="https://www.youtube.com/embed/12TDlEOhgCE?rel=0&list=RDMM&start_radio=1&index=1" frameborder="0" style="display: block; margin-left: auto; margin-right: auto; border: 3px solid #000000; padding: 7px;" allowfullscreen></iframe>
 	</div>
 	<br>
 	<div class="center">
