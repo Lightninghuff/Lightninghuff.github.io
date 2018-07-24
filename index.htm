@@ -9,48 +9,27 @@
 				background-color: #FFFFFF;
 			}
 			.center {
-				background-color: #FFFFFF;
 				margin: auto;
 				width: 95%;
 				height: 95%;
-				padding: 0px;
+				padding: 10px;
 			}
-			/* for browsers wo/2d alpha disable support */
-			#c {
-				background:#000;
+			img, iframe {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				border: 3px solid #000000;
+				padding: 8px;
 			}
 		</style>
     </head>
 	<body>
 	<div class="center">
-	<canvas id=c width=1280px height=640px></canvas>
-	</div>
-	<script>
-		var ctx = c.getContext("2d", {alpha: false});       // context without alpha channel.
-		var idata = ctx.createImageData(c.width, c.height); // create image data
-		var buffer32 = new Uint32Array(idata.data.buffer);  // get 32-bit view
-		(function loop() {
-			noise(ctx);
-		  requestAnimationFrame(loop)
-		})()
-		function noise(ctx) {
-		  var len = buffer32.length - 1;
-		  while(len--) buffer32[len] = Math.random() < 0.5 ? 0 : -1>>0;
-		  ctx.putImageData(idata, 0, 0);
-		}
-	</script>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div class="center">
-	<iframe id="randomVideo" width="80%" height="300px" style="margin-top:50px" src="https://www.youtube.com/embed/12TDlEOhgCE?rel=0&list=RDMM&start_radio=1&index=1" frameborder="0" style="display: block; margin-left: auto; margin-right: auto; border: 3px solid #000000; padding: 7px;" allowfullscreen></iframe>
+	<iframe id="randomVideo" width="80%" height="300px" src="https://www.youtube.com/embed/12TDlEOhgCE?rel=0&list=RDMM&start_radio=1&index=1" frameborder="0" style="display: block; margin-left: auto; margin-right: auto; border: 3px solid #000000; padding: 7px;" allowfullscreen></iframe>
 	</div>
 	<br>
 	<div class="center">
-	<img src="Images/Jaguar.png" alt="Superconscious Jaguar" width="80%" style="display: block; margin-left: auto; margin-right: auto; border: 3px solid #000000; padding: 7px;">
+	<img src="Images/Jaguar.png" alt="Superconscious Jaguar" width="80%">
 	</div>
 	<br>
 	<div class="center">
