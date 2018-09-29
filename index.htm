@@ -60,29 +60,14 @@
 		</style>
     </head>
 	<body>
-	<!--<div class="center">
+	<h1 class="heading1">Superconscious</h1>
+		<h2 class="heading2">Preface</h2>
+		<p>Superconscious is an upcoming <mark>computer and web application</mark>. The application involves <mark>Computerized Cognitive Behavioral Therapy (CCBT)</mark>.</p>
+	<div class="center">
 		<iframe id="randomVideo" width="80%" height="300px" src="https://www.youtube.com/embed/12TDlEOhgCE?rel=0&list=RDMM&start_radio=1&index=1" frameborder="0" allowfullscreen></iframe>
 		<br>
 		<br>
 		<iframe id="finaleVideo" width="80%" height="300px" src="https://www.youtube.com/embed/-3F3Ev1ln7w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	</div>-->
-		<input type="range" id="theme" min="0" max="240" value="0" step="120" />
-		<h1 class="heading1">Superconscious</h1>
-		<h2 class="heading2">Preface</h2>
-		<p>Superconscious is an upcoming <mark>computer and web application</mark>. The application involves <mark>Computerized Cognitive Behavioral Therapy (CCBT)</mark>.</p>
-		<script>
-			var Theme = document.getElementById("theme");
-			Theme.onchange = function() {
-				for(var index = 0; index < document.getElementsByClassName("heading1").length; index++) {
-						document.getElementsByClassName("heading1")[index].style = "background-color: hsl(" + (document.getElementById("theme").value) + ", 100%, 50%);";
-				}
-				for(var index = 0; index < document.getElementsByClassName("heading2").length; index++) {
-						document.getElementsByClassName("heading2")[index].style = "background-color: hsl(" + (document.getElementById("theme").value - 60) + ", 100%, 50%);";
-				}
-				for(var index = 0; index < document.getElementsByTagName("MARK").length; index++) {
-						document.getElementsByTagName("MARK")[index].style = "background-color: hsl(" + (document.getElementById("theme").value + 60) + ", 100%, 50%);";
-				}
-			};
-		</script>
+	</div>
 	</body>
 </html>
