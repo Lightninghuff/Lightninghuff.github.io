@@ -31,13 +31,15 @@
 			}
 		</style>
     </head>
-	<body>
-		<h1 onclick="myFunction()">Superconscious</h1>
-		<iframe id="toggeleable" width="90%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDI2dqht5hGC_cB7P41syTVS" frameborder="0" allowfullscreen></iframe>
-		<iframe id="toggeleable" width="90%" height="500px" src="https://www.youtube.com/embed/-3F3Ev1ln7w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<body onclick="myFunction()">
+		<div id="toggle">
+			<h1>Superconscious</h1>
+			<iframe id="randomVideo" width="90%" height="500px" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDI2dqht5hGC_cB7P41syTVS" frameborder="0" allowfullscreen></iframe>
+			<iframe id="climaxVideo" width="90%" height="500px" src="https://www.youtube.com/embed/-3F3Ev1ln7w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
 		<script>
 		function myFunction() {
-			var x = document.getElementById("toggleable");
+			var x = document.getElementById("toggle");
 			if (x.style.display === "none") {
 				x.style.display = "block";
 			} else {
