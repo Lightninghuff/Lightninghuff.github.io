@@ -25,22 +25,23 @@
 			#dreamscape {
 				position: fixed;
 				width: 100vw;
-				height: 75vh;
+				height: 100vh;
 			}
 			.video {
+				position: absolute;
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
 				width: 100vw;
-				height: 100vh;
+				height: 100vh
 			}
 		</style>
     </head>
 	<body>
 		<div id="toggle">
 			<iframe id="dreamscape" src="https://www.youtube.com/embed/eAgqJnO3kr8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			<iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDI2dqht5hGC_cB7P41syTVS" frameborder="0" allowfullscreen></iframe>
-			<iframe class="video" src="https://www.youtube.com/embed/gm7c8QrIgiw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe class="video" style="top: 100px;" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDI2dqht5hGC_cB7P41syTVS" frameborder="0" allowfullscreen></iframe>
+			<iframe class="video" style="top: 200px;" src="https://www.youtube.com/embed/gm7c8QrIgiw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</body>
 </html>
