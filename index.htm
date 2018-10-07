@@ -22,16 +22,15 @@
 				font-weight: bold;
 				padding: 1px;
 			}
-			.overlay {
-				position: absolute;
-				top: 0; right: 0; bottom: 0; left: 0;
+			#dreamscape {
+				position: fixed;
+				width: 100vw;
+				height: 100vh;
+			}
+			.video {
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
-				width: 50%;
-			}
-			#dreamscape {
-				position: fixed;
 				width: 100vw;
 				height: 100vh;
 			}
@@ -40,8 +39,8 @@
 	<body>
 		<div id="toggle">
 			<iframe id="dreamscape" src="https://www.youtube.com/embed/eAgqJnO3kr8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			<iframe class="overlay" size="50%" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDI2dqht5hGC_cB7P41syTVS" frameborder="0" allowfullscreen></iframe>
-			<iframe class="overlay" size="50%" src="https://www.youtube.com/embed/gm7c8QrIgiw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<iframe class="video" size="50%" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDI2dqht5hGC_cB7P41syTVS" frameborder="0" allowfullscreen></iframe>
+			<iframe class="video" size="50%" src="https://www.youtube.com/embed/gm7c8QrIgiw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
 	</body>
 </html>
