@@ -46,7 +46,51 @@
 		</style>
     </head>
 	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			var bufferSize = 4096;
+			var brownNoise = (function() {
+				var lastOut = 0.0;
+				var node = audioContext.createScriptProcessor(bufferSize, 1, 1);
+				node.onaudioprocess = function(e) {
+					var output = e.outputBuffer.getChannelData(0);
+					for (var i = 0; i < bufferSize; i++) {
+						var white = Math.random() * 2 - 1;
+						output[i] = (lastOut + (0.02 * white)) / 1.02;
+						lastOut = output[i];
+						output[i] *= 3.5; // (roughly) compensate for gain
+					}
+				}
+				return node;
+			})();
+			
+			brownNoise.connect(audioContext.destination);
+		</script>
+		<script>
+		var brownNoise = audioContext.createBrownNoise();
+		var brownGain = audioContext.createGain();
+		brownGain.gain.value = 0;
+		brownNoise.connect(brownGain);
+		brownGain.connect(audioContext.destination);
+		
+		var toggleDemo = function(text, gain) {
+			var handler = function(e) {
+				if (gain.gain.value == 0.0) {
+					$(e.target).text("Stop");
+					gain.gain.value = 0.3;
+				} else {
+					$(e.target).text(text);
+					gain.gain.value = 0.0;
+				}
+			};
+			return handler;
+		};
+		
+		$("#brown-demo").click(toggleDemo("Brown Noise", brownGain));
+		</script>
+		<button id="brown-demo">Brown Noise</button>
 		<img src="/CroppedLogo.png" onclick="">
+		<button>
 		<!--<iframe id="dreamscape" src="https://www.youtube.com/embed/eAgqJnO3kr8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		<iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDLfHnwOdu4fq5EnXIGmTmjc" frameborder="0" allowfullscreen></iframe>-->
 	</body>
