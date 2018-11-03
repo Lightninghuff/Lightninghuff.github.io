@@ -35,26 +35,32 @@
 				height: 100vh;
 				top: 80vh;
 			}-->
-			.tool {
-				position: absolute;
+			.toolAssembly {
+				position: relative;
+				display: block;
 				margin-left: auto;
 				margin-right: auto;
+			}
+			.tool {
+				position: absolute;
 				top: 0px;
 				left: 0px;
-				width: 45vw;
-				height: 45vw;
+				width: 40vw;
+				height: 40vw;
 			}
 		</style>
     </head>
 	<body>
 		<!--<img class="logo" src="/CroppedLogo.png">-->
-		<img class="tool" style="z-index: 0;" src="/TEMPRed.png" onclick="">
-		<img class="tool" style="z-index: 1;" src="/TEMPGreen.png" onclick="">
-		<img class="tool" style="z-index: 2;" src="/TEMPBlue.png" onclick="">
-		<img class="tool" style="z-index: 3;" src="/TEMPYellow.png" onclick="">
-		<img class="tool" style="z-index: 4;" src="/TEMPCyan.png" onclick="">
-		<img class="tool" style="z-index: 5;" src="/TEMPMagenta.png" onclick="">
-		<img class="tool" style="z-index: 6;" src="/TEMPWhite.png" onclick="">
+		<div class="toolAssembly">
+			<img class="tool" src="/TEMPRed.png" onclick="">
+			<img class="tool" src="/TEMPGreen.png" onclick="">
+			<img class="tool" src="/TEMPBlue.png" onclick="">
+			<img class="tool" src="/TEMPYellow.png" onclick="">
+			<img class="tool" src="/TEMPCyan.png" onclick="">
+			<img class="tool" src="/TEMPMagenta.png" onclick="">
+			<img class="tool" src="/TEMPWhite.png" onclick="">
+		</div>
 		<!--<iframe id="dreamscape" src="https://www.youtube.com/embed/eAgqJnO3kr8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		<iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDLfHnwOdu4fq5EnXIGmTmjc" frameborder="0" allowfullscreen></iframe>-->
 	</body>
