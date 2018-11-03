@@ -35,11 +35,12 @@
 				height: 100vh;
 				top: 80vh;
 			}-->
-			.tool {
+			#toolContainer {
 				position: relative;
 				margin-left: auto;
 				margin-right: auto;
-				margin-top: 5vh;
+			}
+			.tool {
 				width: 40vw;
 				height: 40vw;
 			}
@@ -47,9 +48,11 @@
     </head>
 	<body>
 		<!--<img class="logo" src="/CroppedLogo.png">-->
-		<img class="tool" style="z-index: 0;" src="/TEMPBlue.png">
-		<img class="tool" style="z-index: 1;" src="/TEMPYellow.png">
-		<img class="tool" style="z-index: 2;" src="/TEMPWhite.png">
+		<div id="toolContainer">
+			<img class="tool" style="z-index: 0;" src="/TEMPBlue.png">
+			<img class="tool" style="z-index: 1;" src="/TEMPYellow.png">
+			<img class="tool" style="z-index: 2;" src="/TEMPWhite.png">
+		</div>
 		<!--<iframe id="dreamscape" src="https://www.youtube.com/embed/eAgqJnO3kr8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		<iframe class="video" src="https://www.youtube.com/embed/videoseries?list=PL66cZNJTwjDLfHnwOdu4fq5EnXIGmTmjc" frameborder="0" allowfullscreen></iframe>-->
 	</body>
